@@ -1,0 +1,46 @@
+
+.bg-black {
+    background-color: #000 !important;
+  }
+  .text-justify {
+    text-align: justify !important;
+  }
+  .no-rounded {
+    border-radius: 0 !important;
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .h-300px {
+    height: 300px;
+  }
+  .custom-shadow {
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+  .contact-us {
+    background-image: url('/contactUsBg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  @media screen and (max-width: 768px) {
+    .max-width-150-on-phone {
+      max-width: 150px !important;
+    }
+  }
