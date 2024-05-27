@@ -32,7 +32,7 @@ const Collabs = () => {
         <div style={{backgroundColor:'#f1f1f3'}}>
             <div className='w-100 bg-black py-5' >
                 <div className="container py-5">
-                    <h1 className='text-white pb-5'>How we collaborate with you</h1>
+                    <h2 className='text-white pb-5'>How we collaborate with you</h2>
                     <div className="row">
                         {
                             collabSection?.map((val,key)=>(
@@ -53,7 +53,7 @@ const Collabs = () => {
                         }
 
                         <div className="col-md-4">
-                            <button type='button' className='btn btn-lg btn-primary no-rounded w-100 fw-bold'>Let's Collaborate</button>
+                            <button type='button' className='btn btn-lg bg-white text-dark no-rounded w-100 fw-bold'>Let's Collaborate</button>
                         </div>
                         <div className="col-md-8"></div>
                     </div>
@@ -70,7 +70,7 @@ const Collabs = () => {
                 </div>
                 <SwiperCentered sliderData={sliderData} />
             </div>
-            <div className="w-100 contact-us py-5">
+            <div id='contact_us' className="w-100 contact-us py-5">
                 <div className="container text-white py-5">
                     <br /><br /><br />
                     <h1>Contact us</h1>
@@ -137,7 +137,7 @@ const Collabs = () => {
                                 />
                             </div>
                             <div className="col-md-12 mt-4">
-                                <button type='button' className='btn btn-lg btn-primary no-rounded w-100 fw-bold'>Send Message</button>
+                                <button type='button' className='btn btn-lg bg-white text-dark no-rounded w-100 fw-bold'>Send Message</button>
                             </div>
                         </div>
                     </form>
@@ -153,7 +153,7 @@ const Collabs = () => {
                         </div>
                         <div className="col-md-1"></div>
                         <div className="col-md-9 mb-5">
-                            <h1 className='text-white'>We are an enterprise software development company that is inspired by the future</h1>
+                            <h2 className='text-white'>We are an enterprise software development company that is inspired by the future</h2>
                         </div>
                         <div className="col-md-2 mb-5">
                             <h3 className='text-white'>Offices:</h3>
@@ -177,7 +177,7 @@ const Collabs = () => {
                                 </a>
                             </h5>
                         </div>
-                        <div className='text-secondary d-flex align-items-center justify-content-between'>
+                        <div className='text-secondary d-flex flex-wrap align-items-center justify-content-between'>
                             <div><small>Privacy Policy</small></div>
                             <div><small>©{new Date().getFullYear()} DivaishiSoft Development Solutions</small></div>
                         </div>

@@ -95,12 +95,12 @@ const FaqAccordion = () => {
     }));
   };
   const accordionData = [
-    { header: 'Innovation Consulting', data: 'Make your digital transformation journey super simple, safe, and aligned with your specific business needs. Were good at strategy planning for both enterprises and SMBs, IT audit, business process analysis, and more.' },
-    { header: 'Innovation Consulting', data: 'Make your digital transformation journey super simple, safe, and aligned with your specific business needs. Were good at strategy planning for both enterprises and SMBs, IT audit, business process analysis, and more.' },
-    { header: 'Innovation Consulting', data: 'Make your digital transformation journey super simple, safe, and aligned with your specific business needs. Were good at strategy planning for both enterprises and SMBs, IT audit, business process analysis, and more.' },
-    { header: 'Innovation Consulting', data: 'Make your digital transformation journey super simple, safe, and aligned with your specific business needs. Were good at strategy planning for both enterprises and SMBs, IT audit, business process analysis, and more.' },
-    { header: 'Innovation Consulting', data: 'Make your digital transformation journey super simple, safe, and aligned with your specific business needs. Were good at strategy planning for both enterprises and SMBs, IT audit, business process analysis, and more.' },
-    { header: 'Innovation Consulting', data: 'Make your digital transformation journey super simple, safe, and aligned with your specific business needs. Were good at strategy planning for both enterprises and SMBs, IT audit, business process analysis, and more.' },
+    { header: 'Innovation Consulting', data: `Make your digital transformation journey super simple, safe, and aligned with your specific business needs. We're good at strategy planning for both enterprises and SMBs, IT audit, business process analysis, and more.` },
+    { header: 'Digital Transformation', data: `Achieve lower costs, utmost scalability and maximum velocity with our legacy software modernization, cloud, and DevOps services. Our enterprise software development company is here to help you remove the roadblocks to innovation.` },
+    { header: 'Software Engineering', data: `Build enterprise software solutions that perform. We can cover you along the whole way or fill in specific skill gaps in business analysis, UX/UI, testing, development, or support across web, mobile, desktop, cloud, and embedded platforms.` },
+    { header: 'Big Data & Analytics', data: `Use your torrents of data to drive decision-making across the company. From Data Governance & Data Management to Data Analytics and Data Science, we make business, not IT, own your data.` },
+    { header: 'Android Development', data: `Android applications come with their set of user base and customer expectations. We, as a leading android applications development company, help businesses align their ideas with those expectations and an Android-specific user base. Our android apps development services help you choose the best Android platform and the way you can top the store.` },
+    { header: 'Extended Reality', data: `Deliver immersive experiences through AR, VR, or MR to create new products, boost productivity, or launch into the metaverse. XR solutions help you bypass distance challenges and be innovative for real.` },
   ];
 
 

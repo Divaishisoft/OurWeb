@@ -17,13 +17,27 @@ const SwiperCentered = ({ sliderData }) => {
                 pagination={{
                     clickable: true,
                 }}
+                breakpoints={{
+                    320: {
+                      slidesPerView: 1,
+                    },
+                    480: {
+                      slidesPerView: 2,
+                    },
+                    768: {
+                      slidesPerView: 3,
+                    },
+                    1024: {
+                      slidesPerView: 4,
+                    },
+                }}
                 className="mySwiper"
             >
                 {
                     sliderData?.map((val,key)=>(
                         <SwiperSlide key={key} style={{backgroundColor:'#f1f1f3'}}>
-                            <div className='custom-shadow border border-dark p-2'>
-                                <img src={val?.imgUrl} className='w-100' alt={val?.imgUrl} />
+                            <div className='p-2' style={{ height: '300px', overflow: 'hidden' }}>
+                                <img src={val?.imgUrl} className='w-100 zoomImg' alt={val?.imgUrl} />
                             </div>
                             <h5 className='mt-4'>{val?.heading}</h5>
                         </SwiperSlide>

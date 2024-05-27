@@ -1,123 +1,67 @@
+/* eslint-disable no-unused-vars */
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import logoImage from "../../assets/logo.png"
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
+  const [scrolled, setScrolled] = React.useState(false);
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > window.innerHeight * 0.2) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
 
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <AppBar position="static" sx={{backgroundColor:"#000"}}>
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-                  <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-           <img alt="" src={logoImage} style={{ height: '114px', padding:' 5%'}}/>
-          </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" sx={{fontSize:"20px"}}>{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-           <img alt="" src={logoImage} style={{ height: '80px', padding:' 5%'}}/>
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' ,fontSize:"20px" }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
-
-        </Toolbar>
-      </Container>
-    </AppBar>
+    <>
+      <nav className={`navbar navbar-expand-lg fixed-top ${scrolled ? 'scrolled' : ''}`} style={{ background: scrolled ? '#000' : 'transparent' }}>
+        <div className="container">
+          <a className="navbar-brand text-white" href="#"><img src="/logo.png" style={{ height: '65px' }} alt="/logo.png" /></a>
+          <button className="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul className="navbar-nav ms-auto">
+              <li className="nav-item">
+                <a className="nav-link text-white" aria-current="page" href="#">Home</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link text-white" href="#">About Us</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link text-white" href="#clients">Clients</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link text-white" href="#latest_projects">Latest Projects</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link text-white" href="#contact_us">Contact Us</a>
+              </li>
+              {/* <li className="nav-item dropdown">
+                <a className="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown link
+                </a>
+                <ul className="dropdown-menu">
+                  <li><a className="dropdown-item" href="#">Action</a></li>
+                  <li><a className="dropdown-item" href="#">Another action</a></li>
+                  <li><a className="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li> */}
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </>
   );
 }
 export default ResponsiveAppBar;
